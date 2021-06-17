@@ -2,12 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:setting_app/account_page.dart';
 
-Widget themeText(String? text, double size) {
+Widget headText(String? text, double size) {
   return Text(
     text!,
     style: GoogleFonts.lato(
       fontSize: size,
       fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),
+  );
+}
+
+Widget fText(String? text, double size) {
+  return Text(
+    text!,
+    style: GoogleFonts.lato(
+      fontSize: size,
+      fontWeight: FontWeight.normal,
       color: Colors.black,
     ),
   );
@@ -35,7 +46,7 @@ class _AccountState extends State<Account> {
           size: 30,
         ),
       ),
-      title: themeText("ElectricGoal", 20),
+      title: fText("ElectricGoal", 20),
       subtitle: Text(
         "Personal info",
         style: GoogleFonts.lato(
@@ -71,7 +82,7 @@ class Language extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           //borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: Colors.orange[100],
+          color: Colors.orange[50],
         ),
         child: Icon(
           Icons.language_rounded,
@@ -105,8 +116,7 @@ class DarkMode extends StatelessWidget {
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          //borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: Colors.purple[100],
+          color: Colors.purple[50],
         ),
         child: Icon(
           Icons.dark_mode_rounded,
@@ -133,7 +143,7 @@ class TextBoth extends StatelessWidget {
         Text(title!,
             style: GoogleFonts.lato(
               fontSize: 20,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.normal,
               color: Colors.black,
             )),
         Text(text!,
@@ -160,7 +170,7 @@ class FListTitle extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           //borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: color[100],
+          color: color[50],
         ),
         child: Icon(
           icon,
@@ -168,7 +178,7 @@ class FListTitle extends StatelessWidget {
           size: 30,
         ),
       ),
-      title: themeText(text, 20),
+      title: fText(text, 20),
       trailing: Container(
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(

@@ -47,7 +47,7 @@ class AccountPage extends StatelessWidget {
             ),
             Container(
                 padding: EdgeInsets.only(left: 22, top: 10),
-                child: themeText("Account", 40)),
+                child: headText("Account", 40)),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -55,13 +55,13 @@ class AccountPage extends StatelessWidget {
                 RowText(
                   text1: "Name",
                   text2: "ElectricGoal",
-                  size: 25,
+                  size: 22,
                 ),
                 Gender(),
                 RowText(
                   text1: "Age",
                   text2: "18",
-                  size: 30,
+                  size: 22,
                 ),
                 RowText(
                   text1: "Email",

@@ -28,7 +28,7 @@ class RowText extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 22, top: 30),
       child: Row(
-        children: [headline(text1), themeText(text2!, size!)],
+        children: [headline(text1), fText(text2!, size!)],
       ),
     );
   }
@@ -97,11 +97,11 @@ class Gender extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               //borderRadius: BorderRadius.all(Radius.circular(10)),
-              color: Colors.purple[100],
+              color: Colors.purple[300],
             ),
             child: Icon(
               Icons.male_rounded,
-              color: Colors.purple,
+              color: Colors.white,
               size: 30,
             ),
           ),
