@@ -2,19 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:setting_app/account_page.dart';
 
-Widget headText(String? text, double size) {
-  return Text(
-    text!,
-    style: GoogleFonts.lato(
-      fontSize: size,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
-    ),
-  );
+class HeadText extends StatelessWidget {
+  HeadText({Key? key, this.text, this.size}) : super(key: key);
+  final String? text;
+  final double? size;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text!,
+      style: GoogleFonts.lato(
+        fontSize: size,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+    );
+  }
 }
 
-Widget fText(String? text, double size) {
-  return Text(
+class TextWidget extends StatelessWidget {
+  const TextWidget({Key? key, this.text, this.size}) : super(key: key);
+
+  final String? text;
+  final double? size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
     text!,
     style: GoogleFonts.lato(
       fontSize: size,
@@ -22,6 +35,7 @@ Widget fText(String? text, double size) {
       color: Colors.black,
     ),
   );
+  }
 }
 
 class Account extends StatefulWidget {
@@ -46,7 +60,7 @@ class _AccountState extends State<Account> {
           size: 30,
         ),
       ),
-      title: fText("ElectricGoal", 20),
+      title: TextWidget(text: "ElectricGoal", size: 20),
       subtitle: Text(
         "Personal info",
         style: GoogleFonts.lato(
@@ -178,7 +192,7 @@ class FListTitle extends StatelessWidget {
           size: 30,
         ),
       ),
-      title: fText(text, 20),
+      title: TextWidget(text: text, size: 20,),
       trailing: Container(
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(

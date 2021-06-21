@@ -47,7 +47,7 @@ class AccountPage extends StatelessWidget {
             ),
             Container(
                 padding: EdgeInsets.only(left: 22, top: 10),
-                child: headText("Account", 40)),
+                child: HeadText(text: "Account", size: 40)),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

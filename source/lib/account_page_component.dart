@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:setting_app/setting_component.dart';
 
-Widget headline(String? text) {
-  return Container(
-    width: 110,
-    child: Text(
-      text!,
-      style: GoogleFonts.lato(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-        color: Colors.grey,
+class Information extends StatelessWidget {
+  Information({Key? key, this.text}) : super(key: key);
+  final String? text;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 110,
+      child: Text(
+        text!,
+        style: GoogleFonts.lato(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.grey,
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 // ignore: must_be_immutable
@@ -28,7 +33,7 @@ class RowText extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 22, top: 30),
       child: Row(
-        children: [headline(text1), fText(text2!, size!)],
+        children: [Information(text: text1), TextWidget(text: text2!, size: size!)],
       ),
     );
   }
@@ -47,7 +52,7 @@ class Photo extends StatelessWidget {
         //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          headline("Photo"),
+          Information(text: "Photo"),
           Column(
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -91,7 +96,7 @@ class Gender extends StatelessWidget {
       padding: EdgeInsets.only(left: 22, top: 30),
       child: Row(
         children: [
-          headline("Gender"),
+          Information(text: "Gender"),
           Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(

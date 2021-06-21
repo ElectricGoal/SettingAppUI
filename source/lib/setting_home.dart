@@ -24,16 +24,16 @@ class HomeSetting extends StatelessWidget {
             ),
             Container(
                 padding: EdgeInsets.only(left: 22, top: 10),
-                child: headText("Settings", 40)),
+                child: HeadText(text: "Settings", size: 40)),
             Container(
               padding: EdgeInsets.only(left: 22, top: 40),
-              child: headText("Account", 25),
+              child: HeadText(text: "Account", size: 25),
             ),
             Container(
                 padding: EdgeInsets.only(left: 12, top: 20), child: Account()),
             Container(
               padding: EdgeInsets.only(left: 22, top: 30),
-              child: headText("Settings", 25),
+              child: HeadText(text: "Settings", size: 25),
             ),
             Expanded(
               child: Padding(
